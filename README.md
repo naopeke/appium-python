@@ -62,6 +62,11 @@ mv ~/Descargas/Appium-Inspector-2025.11.1-linux-x64 ~/Applications/
 appium-inspector
 ```
 
+> Remote Host 127.0.0.1
+> Remote Port 4723
+> Remote Path  /wd/hub
+> Check "Allow Unauthorized Certificates"
+
 # Terminal 2
 ```
 appium --allow-cors
@@ -71,11 +76,11 @@ appium --allow-cors
 JSON Representation
 ```
 {
-  "platformName": "Android",
-  "appium:automationName": "UiAutomator2",
-  "appium:deviceName": "Android",
-  "appium:appPackage": "com.android.settings",
-  "appium:appActivity": ".Settings"
+  "platformName": "android",
+  "platformVersion": "16.0",
+  "deviceName": "Pixel_6",
+  "automationName": "UiAutomator2",
+  "app": "/home/***(name)/Descargas/proverbial_android.apk"
 }
 ```
 
