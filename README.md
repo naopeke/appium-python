@@ -6,7 +6,7 @@ tar -xzf android-studio-**.**(version)-linux.tar.gz
 sudo mv android-studio /opt/
 ```
 
-# 起動
+# Run
 ```
 /opt/android-studio/bin/studio
 ```
@@ -20,7 +20,7 @@ sudo mv android-studio /opt/
 > Gradle JDK: jbr-21
 
 ## Appium Inspector for Linux
-# AppImage
+# Method 1. AppImage file
 ```
 Appium-Inspector-2025.11.1-linux-x86_64.AppImage
 ```
@@ -28,8 +28,18 @@ Appium-Inspector-2025.11.1-linux-x86_64.AppImage
 chmod +x Appium-Inspector-2025.11.1-linux-x86_64.AppImage
 ./Appium-Inspector-2025.11.1-linux-x86_64.AppImage
 ```
+# Symbolic link
+```
+mkdir -p ~/.local/bin
+ln -s ~/Downloads/Appium-Inspector-2025.11.1-linux-x86_64.AppImage ~/.local/bin/appium-inspector
+```
+# Run
+```
+appium-inspector
+```
 
-# tar.gz
+
+# Method 2. tar.gz file
 # Download
 ```
 cd ~/Downloads
@@ -45,4 +55,42 @@ mv ~/Descargas/Appium-Inspector-2025.11.1-linux-x64 ~/Applications/
 # Run
 ```
 ~/Applications/Appium-Inspector-2025.11.1-linux-x64/Appium-Inspector
+```
+----------------------------------------------------------------
+# Terminal 1
+```
+appium-inspector
+```
+
+# Terminal 2
+```
+appium --allow-cors
+```
+
+# Inspector
+JSON Representation
+```
+{
+  "platformName": "Android",
+  "appium:automationName": "UiAutomator2",
+  "appium:deviceName": "Android",
+  "appium:appPackage": "com.android.settings",
+  "appium:appActivity": ".Settings"
+}
+```
+
+# android_setup.py
+```
+pip3 install selenium
+pip3 show selenium
+pip3 install Appium-Python-Client
+pip3 show Appium-Python-Client
+```
+
+## APK editor studio
+apk-editor-studio_linux_1.7.2.AppImage
+```
+cd ~/Downloads
+chmod +x apk-editor-studio_linux_1.7.2.AppImage
+./apk-editor-studio_linux_1.7.2.AppImage
 ```
