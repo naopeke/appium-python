@@ -64,12 +64,15 @@ appium-inspector
 
 > Remote Host 127.0.0.1
 > Remote Port 4723
-> Remote Path  /wd/hub
 > Check "Allow Unauthorized Certificates"
 
 # Terminal 2
 ```
 appium --allow-cors
+```
+run appium with the port 4724
+```
+appium -p 4724 
 ```
 
 # Inspector
@@ -159,3 +162,4 @@ project-root/
 ├── package.json            # Node.js dependencies (if used)
 ├── README.md               # project documentation
 └── .gitignore
+
