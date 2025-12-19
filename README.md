@@ -84,6 +84,9 @@ JSON Representation
   "deviceName": "Pixel_6",
   "automationName": "UiAutomator2",
   "app": "/home/***(name)/Descargas/proverbial_android.apk"
+  "ensureWebviewsHavPages": "true",
+  "noReset": "true",
+  "newCommandTimeout": 300
 }
 ```
 
